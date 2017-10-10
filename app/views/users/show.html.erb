@@ -1,4 +1,10 @@
 <h1>Profile</h1>
 <div>
+  <%= @user.following.count %> <%= link_to "following", following_user_path(@user) %> | 
+  <%= @user.followers.count %> <%= link_to "followers", followers_user_path(@user) %>
+</div>
+<br />
+
+<div>
   <%= @user.name %>, <%= @user.email %>
 </div>

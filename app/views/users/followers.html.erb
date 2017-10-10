@@ -1,0 +1,5 @@
+<ol>
+<% @followers.each do |follower| %>
+  <li><%= link_to follower.name, user_path(follower) %></li>
+<% end %>
+</ol>
