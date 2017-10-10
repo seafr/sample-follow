@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171004185848) do
+ActiveRecord::Schema.define(version: 20171010031014) do
 
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
@@ -19,10 +19,6 @@ ActiveRecord::Schema.define(version: 20171004185848) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-
-  add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
-  add_index "relationships", ["follower_id", "follower_id"], name: "index_relationships_on_follower_id_and_follower_id", unique: true
-  add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
